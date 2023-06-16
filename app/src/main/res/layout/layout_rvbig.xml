@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    app:cardCornerRadius="20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgBigImage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/img_1"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgSmallImage"
+            android:layout_width="80dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/img_1"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="@id/imgBigImage"
+            app:layout_constraintTop_toBottomOf="@id/imgBigImage" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="Hello Qorld"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/imgSmallImage"
+            app:layout_constraintStart_toEndOf="@id/imgSmallImage"
+            app:layout_constraintTop_toTopOf="@id/imgSmallImage" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/imgSmallImage"
+            app:layout_constraintTop_toBottomOf="@id/imgSmallImage" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgAddCircle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/ic_add_circle"
+            app:layout_constraintStart_toStartOf="@id/txtDesc"
+            app:layout_constraintTop_toBottomOf="@id/txtDesc" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img3dot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_3dot"
+            app:layout_constraintBottom_toBottomOf="@id/imgAddCircle"
+            app:layout_constraintStart_toEndOf="@id/imgAddCircle"
+            app:layout_constraintTop_toTopOf="@id/imgAddCircle" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_play_circle"
+            app:layout_constraintBottom_toBottomOf="@id/img3dot"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/img3dot" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
